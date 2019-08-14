@@ -1,0 +1,15 @@
+<?php $_product = $this->getProduct(); ?>
+<?php if ($this->isActive() && $this->showPricePerMonth()): ?>
+    <?php if ($_product->getSpecialPrice()): ?>
+        <?php $price = $this->getPricePerMonth($_product); ?>
+    <?php else: ?>
+        <?php $price = $this->getPricePerMonth($_product); ?>
+    <?php endif; ?>
+    <div class="price-monthly">
+        <?php echo $this->__('Starting from: '); ?>
+        <?php echo $price ?>
+        <span class="text-monthly">
+                      / <?php echo $this->__('month') ?>
+                       </span>
+    </div>
+<?php endif; ?>

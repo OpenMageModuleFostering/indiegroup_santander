@@ -1,0 +1,53 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">  
+    <catalog_product_view>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/santander.css</stylesheet>
+            </action>
+            <action method="addJs"><script>jquery/jquery-1.9.0.min.js</script></action>
+            <action method="addJs"><script>fancybox/jquery.fancybox.js</script></action>
+            <action method="addCss">
+                <stylesheet>css/jquery.fancybox.css</stylesheet>
+            </action>
+            <action method="addJs"><script>santander/santander.js</script></action>
+        </reference>
+    </catalog_product_view>   
+    <santander_index_index>   
+        <reference name="root">   
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>   
+        </reference>   
+        <reference name="content">   
+            <block type="santander/index" name="santander_index" template="santander/index.phtml"/>   
+        </reference>   
+    </santander_index_index>
+    <PRODUCT_TYPE_simple>
+        <reference name="product.info.simple.extra">
+            <block type="santander/santanderprice" as="santanderproductview" template="santander/santanderprice.phtml" />
+        </reference>
+    </PRODUCT_TYPE_simple>
+    <PRODUCT_TYPE_configurable>
+        <reference name="product.info.configurable.extra">
+            <block type="santander/santanderprice" as="santanderproductview" template="santander/santanderprice.phtml" />
+        </reference>
+    </PRODUCT_TYPE_configurable>
+    <PRODUCT_TYPE_grouped>
+        <reference name="product.info.grouped.extra">
+            <block type="santander/santanderprice" as="santanderproductview" template="santander/santanderprice.phtml" />
+        </reference>
+    </PRODUCT_TYPE_grouped>
+    <PRODUCT_TYPE_bundle>
+        <reference name="product.info.options.wrapper.bottom">
+            <block type="santander/santanderprice" as="santanderproductview" template="santander/santanderprice.phtml" />
+        </reference>
+    </PRODUCT_TYPE_bundle>
+    <PRODUCT_TYPE_virtual>
+        <reference name="product.info.virtual.extra">
+            <block type="santander/santanderprice" as="santanderproductview" template="santander/santanderprice.phtml" />
+        </reference>
+    </PRODUCT_TYPE_virtual>
+    <!-- TODO: configurable/grouped and virtual  + overzichtsprijzen etc... -->
+</layout>   
+	

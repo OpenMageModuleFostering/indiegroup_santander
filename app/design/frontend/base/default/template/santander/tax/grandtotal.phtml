@@ -1,0 +1,10 @@
+<?php if(Mage::helper('santander')->isActive()): ?>
+    <tr>
+        <td class="a-right" colspan="<?php echo $this->getColspan(); ?>">
+            <strong><?php echo $this->__('Price per month') ?></strong>
+        </td>
+        <td class="a-right">
+            <strong><?php echo Mage::helper('core')->currency(round(Mage::helper('santander')->getPricePerMonth(round($this->getTotal(), 2)), 2)); ?></strong>
+        </td>
+    </tr>
+<?php endif; ?>

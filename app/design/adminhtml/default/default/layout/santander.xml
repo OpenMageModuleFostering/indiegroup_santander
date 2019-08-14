@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <santander_adminhtml_santanderbackend_index>
+	<reference name="content">
+	  <block type="santander/adminhtml_santanderbackend" name="santanderbackend" template="santander/santanderbackend.phtml"/>
+	</reference>
+  </santander_adminhtml_santanderbackend_index>
+</layout>

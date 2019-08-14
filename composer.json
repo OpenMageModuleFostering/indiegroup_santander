@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Indiegroup_Santander",
+    "type": "magento-module",
+    "license": "OSL",
+    "homepage": "",
+    "description": "Indiegroup_Santander",
+    "authors": [
+    {
+        "name": "IndieGroup",
+        "email": "alexander@indiegroup.be"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

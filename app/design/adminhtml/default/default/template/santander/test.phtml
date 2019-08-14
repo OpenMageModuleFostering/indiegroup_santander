@@ -1,0 +1,85 @@
+<h1>Test Santander</h1>
+<h3>Refer Post Request</h3>
+<form method="POST" action="<?php echo Mage::getBaseUrl() . 'santander/payment/status/' ?>">
+    Reference Id: <input type="text" name="referenceId" value="" /><br />
+    Amount: <input type="text" name="amount" value="" /><br />
+    Postcode: <input type="text" name="pstocode" value="" /><br />
+    emailadres: <input type="text" name="emailaddress" value="" /><br />
+    acceptStatus: <input type="text" name="acceptStatus" value="" /><br />
+    userName: <input type="text" name="userName" value="0260904" /><br />
+    rrnumber: <input type="text" name="rrnumber" value="" /><br />
+    password: <input type="text" name="password" value="" /><br />
+    referenceNumber: <input type="text" name="referenceNumber" value="" /><br />
+    result: <input type="text" name="result" value="Refer" /><br />
+
+    Example:
+    <span>
+        referenceId=0810201303&amount=450.0&postcode=5060&emailaddress=&acceptStatus=1&userName=0023050&rrnumber=62070900311&password=&referenceNumber=0810201303&result=Refer</span>
+    <input type="submit" value="Submit" />
+</form>
+<h3>Reject Post Request</h3>
+<form method="POST" action="<?php echo Mage::getBaseUrl() . 'santander/payment/status/' ?>">
+Reference Id: <input type="text" name="referenceId" value="" /><br />
+    Amount: <input type="text" name="amount" value="" /><br />
+    Postcode: <input type="text" name="pstocode" value="" /><br />
+    emailadres: <input type="text" name="emailaddress" value="" /><br />
+    acceptStatus: <input type="text" name="acceptStatus" value="" /><br />
+    userName: <input type="text" name="userName" value="0260904" /><br />
+    rrnumber: <input type="text" name="rrnumber" value="" /><br />
+    password: <input type="text" name="password" value="" /><br />
+    referenceNumber: <input type="text" name="referenceNumber" value="" /><br />
+    result: <input type="text" name="result" value="Reject" /><br />
+
+    Example:
+    <span>
+referenceId=0910201301&amount=995.0&postcode=4620&emailaddress=KATRIEN.DEMEULEMEESTER%40SANTANDER.BE&acceptStatus=1&userName=0023050&rrnumber=75070203079&password=&referenceNumber=0910201301&result=Reject</span>
+    <input type="submit" value="Submit" />
+</form>
+<h3>Accept (stage 1) Post Request</h3>
+<form method="POST" action="<?php echo Mage::getBaseUrl() . 'santander/payment/status/' ?>">
+    expirationmonth: <input type="text" name="expirationmonth" value="" /><br />
+Reference Id: <input type="text" name="referenceId" value="" /><br />
+    Amount: <input type="text" name="amount" value="" /><br />
+    Postcode: <input type="text" name="postcode" value="" /><br />
+    emailadres: <input type="text" name="emailaddress" value="" /><br />
+    acceptStatus: <input type="text" name="acceptStatus" value="" /><br />
+    expirationyear: <input type="text" name="expirationyear" value="" /><br />
+    userName: <input type="text" name="userName" value="0260904" /><br />
+    rrnumber: <input type="text" name="rrnumber" value="" /><br />
+    password: <input type="text" name="password" value="" /><br />
+    referenceNumber: <input type="text" name="referenceNumber" value="" /><br />
+    cardNumber: <input type="text" name="cardNumber" value="" /><br />
+    result: <input type="text" name="result" value="Accept" /><br />
+    
+    Example:
+    <span>
+expirationmonth=7&referenceId=0910201302&amount=995.0&postcode=1120&emailaddress=KATRIEN.DEMEULEMEESTER%40SANTANDER.BE&acceptStatus=1&expirationyear=2023&userName=0023050&rrnumber=69111515251&password=&referenceNumber=0910201302&cardNumber=5641883718970497&result=Accept</span>
+    <input type="submit" value="Submit" />
+</form>
+<h3>Accept Repeat Purchase Post Request</h3>
+<form method="POST" action="<?php echo Mage::getBaseUrl() . 'santander/payment/status/' ?>">
+    expirationmonth: <input type="text" name="expirationmonth" value="" /><br />
+    goodsDescription: <input type="text" name="goodsDescription" value="" /><br />
+    password: <input type="text" name="password" value="" /><br />
+    referenceNumber: <input type="text" name="referenceNumber" value="" /><br />
+    expirationyear: <input type="text" name="expirationyear" value="" /><br />
+    Amount: <input type="text" name="amount" value="" /><br />
+    Reference Id: <input type="text" name="referenceId" value="" /><br />
+    actionType: <input type="text" name="actionType" value="" /><br />
+    userName: <input type="text" name="userName" value="0260904" /><br />
+    result: <input type="text" name="result" value="Accept" /><br />
+    entrytime: <input type="text" name="entrytime" value="" /><br />
+    transactionGroupKey: <input type="text" name="transactionGroupKey" value="" /><br />
+    cardNumber: <input type="text" name="cardNumber" value="" /><br />
+    rrnumber: <input type="text" name="rrnumber" value="" /><br />
+    emailadres: <input type="text" name="emailaddress" value="" /><br />
+    creditType: <input type="text" name="creditType" value="" /><br />
+    customerTransactionKey: <input type="text" name="customerTransactionKey" value="" /><br />
+    acceptStatus: <input type="text" name="acceptStatus" value="" /><br />
+    Postcode: <input type="text" name="postcode" value="" /><br />
+    
+    Example:
+    <span>
+expirationmonth=4&goodsDescription=&password=3011&referenceNumber=300040226&expirationyear=2016&amount=6.23&referenceId=300040226&actionType=0101&userName=0023011&result=Accept&entrytime=2013-0919+06A543A26&transactionGroupKey=&cardNumber=3400007814&rrnumber=57063012025&emailaddress=TEST1234ANDARE.COM&creditType=&customerTransactionKey=&acceptStatus=3&postcode=2460</span>
+    <input type="submit" value="Submit" />
+</form>

@@ -1,0 +1,18 @@
+<?php
+$sid = $this->getRequest()->getParam('sid');
+$recurring = $this->getRequest()->getParam('recurring');
+?>
+<?php if($recurring): ?>
+<form name="santanderform" method="post" action="https://uat.santander.be/BE_CONS_OFT_WEB/pages/nl/form.jsp?<?php echo $sid; ?>">
+    <input type="hidden" name="orderid" value="<?php // echo $orderId; ?>">
+    <input type="hidden" name="grandtotal" value="<?php // echo $_order->getBaseGrandTotal(); ?>">
+</form>
+<?php else: ?>
+<form name="santanderform" method="post" action="https://uat.santander.be/BE_CONS_OFT_WEB/pages/nl/form2.jsp?<?php echo $sid; ?>">
+    <input type="hidden" name="orderid" value="<?php // echo $orderId; ?>">
+    <input type="hidden" name="grandtotal" value="<?php // echo $_order->getBaseGrandTotal(); ?>">
+</form>
+<?php endif; ?>
+<script type="text/javascript">
+    document.santanderform.submit();
+</script>

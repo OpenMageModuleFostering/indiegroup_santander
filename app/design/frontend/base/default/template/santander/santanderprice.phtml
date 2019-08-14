@@ -1,0 +1,62 @@
+<?php $_product = $this->getProduct() ?>
+<?php if($this->isActive() && $this->showPricePerMonth()) : ?>
+    <div class="monthly">
+<span class="price-monthly">
+    <?php echo $this->__('Starting from: '); ?>
+    <?php if($_product->getSpecialPrice() == ""): ?>
+        <?php echo $this->getPricePerMonth($_product); ?>
+    <?php else: ?>
+        <?php echo $this->getPricePerMonth($_product); ?>
+    <?php endif; ?>
+</span>
+    <span class="text-monthly">
+         / <?php echo $this->__('month') ?>
+    </span>
+    </div>
+    <?php if($_product->getTypeId() != 'grouped' && $_product->getTypeId() != 'bundle'): ?>
+    <div class="repayment">
+        <a href="#santander_information" id="repayment" ><?php echo $this->__('Repayment Overview'); ?></a>
+    </div>
+
+    <div style="display:none">
+        <div id="santander_information">
+
+            <?php
+            if($_product->getSpecialPrice() == ""):
+                $data = $this->getDataOfSantander(round($_product->getPrice(), 2));
+            else:
+                $data = $this->getDataOfSantander(round($_product->getSpecialPrice(), 2));
+            endif;
+            $totalPrice = Mage::helper('core')->currency(round((float)$data->calcAmount, 2));
+            $ranges = $data->ranges;
+            ?>
+            <?php echo $this->__('Repayment for a onetime recording of %s', $totalPrice); ?>
+            <table>
+                <thead>
+                <tr>
+                    <td style="width:200px;"><?php echo $this->__('Period'); ?></td>
+                    <td><?php echo $this->__('Amount'); ?></td>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach($ranges->range as $range): ?>
+                    <tr>
+                        <td>
+                            <?php echo $this->__('From month %s to month %s', $range->start, ((int)$range->end + 1)); ?>
+                        </td>
+                        <td>
+                            <?php echo $range->installment; ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+            <p>
+                <?php echo $this->getLegalNotices(); ?>
+                <br />
+                <?php echo $this->__(Mage::getStoreConfig('santander/general/custom_verm')); ?>
+            </p>
+        </div>
+    </div>
+    <?php endif; ?>
+<?php endif; ?>

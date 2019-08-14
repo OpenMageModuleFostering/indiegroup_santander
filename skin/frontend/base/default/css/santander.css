@@ -1,0 +1,85 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 32, ../sass/santander.scss */
+.fancybox-opened .fancybox-skin {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) !important;
+  border-radius: 0 !important;
+  padding: 20px 25px 20px 25px !important;
+  border: 3px solid #cfcfcf;
+}
+
+/* line 38, ../sass/santander.scss */
+.fancybox-close {
+  background-repeat: no-repeat !important;
+  background-position: 50% 50% !important;
+  background-color: #db0067 !important;
+  background-image: url("../images/fancybox/close.png") !important;
+  background-size: 14px 14px !important;
+  cursor: pointer;
+  height: 32px !important;
+  width: 32px !important;
+  right: -35px !important;
+  top: -3px !important;
+  width: 36px;
+  z-index: 8040;
+  -webkit-transition: background-color 400ms ease-in-out;
+  -moz-transition: background-color 400ms ease-in-out;
+  -ms-transition: background-color 400ms ease-in-out;
+  -o-transition: background-color 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 17, ../sass/santander.scss */
+  .fancybox-close {
+    background-image: url("../images/fancybox/close@2x.png") !important;
+    -webkit-background-size: 14px 14px;
+    -moz-background-size: 14px 14px;
+    -o-background-size: 14px 14px;
+    background-size: 14px 14px;
+  }
+}
+/* line 52, ../sass/santander.scss */
+.fancybox-close:hover {
+  background-color: #c2005b !important;
+}
+
+/* line 57, ../sass/santander.scss */
+#santander_information {
+  text-align: left;
+}
+/* line 59, ../sass/santander.scss */
+#santander_information h3 {
+  margin-bottom: 10px;
+  color: #189dba;
+  font: 18px/1.2em  "trebuchet ms", sans-serif;
+  font-weight: normal;
+}
+/* line 65, ../sass/santander.scss */
+#santander_information p {
+  margin-bottom: 10px;
+}
+/* line 68, ../sass/santander.scss */
+#santander_information table {
+  margin-bottom: 10px;
+}
+/* line 2, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#santander_information table th {
+  text-align: center;
+  font-weight: bold;
+}
+/* line 6, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#santander_information table td,
+#santander_information table th {
+  padding: 2px;
+}
+/* line 8, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/utilities/tables/_scaffolding.scss */
+#santander_information table td.numeric,
+#santander_information table th.numeric {
+  text-align: right;
+}
+/* line 71, ../sass/santander.scss */
+#santander_information table th:first-child {
+  text-align: left;
+}
