@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Indiegroup_Santander",
+    "name": "openmage-module-fostering\/indiegroup_santander",
     "type": "magento-module",
-    "license": "OSL",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Indiegroup_Santander",
     "authors": [
